@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".View.ViewSelectedMovie">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp">
+
+        <!-- Video Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/image_background">
+
+            <!-- WebView for Trailer -->
+            <WebView
+                android:id="@+id/webViewTrailer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <!-- Fallback Poster -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewPoster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Genre & Rating -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGenreAndRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/bg_text_chip"
+            android:padding="@dimen/_6sdp"
+            android:text="Action | Drama | Acting • PG-13"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!-- Cast (Optional, if needed) -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMainCast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".70"
+                android:text="Main Cast: ABC, XYZ"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/_11sdp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Episode Count -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEpisode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".30"
+                android:gravity="end"
+                android:text="12 Episodes"
+                android:textColor="@color/black_60"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Title -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Anime Title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <!-- Plot/Synopsis -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:lineSpacingExtra="4dp"
+            android:text="Anime Plot or Synopsis"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            tools:ignore="HardcodedText" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

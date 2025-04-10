@@ -58,7 +58,7 @@ data class Daum(
     val licensors: List<Producer>,
     val studios: List<Producer>,
     val genres: List<Producer>,
-    val explicit_genres: String? = null,
+    val explicit_genres: List<Producer>,
     val themes: List<Producer>,
     val demographics: List<Producer>,
 ) : Parcelable

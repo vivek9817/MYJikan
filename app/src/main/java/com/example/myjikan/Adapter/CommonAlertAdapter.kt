@@ -4,6 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myjikan.Model.Daum
 import com.example.myjikan.ViewHolder.GenericViewHolder
 
 abstract class CommonAlertAdapter<T>(
@@ -31,22 +32,18 @@ abstract class CommonAlertAdapter<T>(
             override fun performFiltering(p0: CharSequence?): FilterResults {
                 val queryString = p0.toString()
                 val filterResults = FilterResults()
-                when(tag){
+                when (tag) {
                     "1" -> {
                         filterResults.values =
                             if (queryString.isEmpty()) {
                                 items
                             } else {
-//                                (items as ArrayList<MovieResponse>).filter {
-//                                    it.familyNumber!!.contains(
-//                                        queryString,
-//                                        ignoreCase = true
-//                                    ) || it.familyNumber!!.contains(p0.toString()) ||
-//                                            it.firstName!!.contains(
-//                                                queryString,
-//                                                ignoreCase = true
-//                                            ) || it.firstName!!.contains(p0.toString())
-//                                }
+                                (items as ArrayList<Daum>).filter {
+                                    it.title!!.contains(
+                                        queryString,
+                                        ignoreCase = true
+                                    ) || it.title!!.contains(p0.toString())
+                                }
                             }
                     }
                 }

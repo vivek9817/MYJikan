@@ -5,5 +5,6 @@ class ApiEndPoint {
 
         const val BASE_URL = "https://api.jikan.moe/v4/"
         const val GETTOPANIM = "top/anime"
+        const val GENTANIMDETAILS = "anime/"
     }
 }

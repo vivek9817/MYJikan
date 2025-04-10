@@ -6,5 +6,5 @@ class AppRepository {
 
     suspend fun getRequest(endpoint: String) = apiService?.getRequest(endpoint)
 
-    suspend fun postRequest(endpoint: String, body: Any) = apiService?.postRequest(endpoint, body)
+    suspend fun getAnimRequest(endpoint: String) = apiService?.getAnimRequest(endpoint)
 }
